@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/N-Nikolaev/drum-machine/issues"
   },
-  "homepage": "https://github.com/N-Nikolaev/drum-machine#readme"
+  "homepage": "https://github.com/N-Nikolaev/drum-machine#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
 }
