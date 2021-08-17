@@ -4,7 +4,7 @@
   "description": "Free Code Camp (Front End Libraries): Drum Machine",
   "main": "index.js",
   "scripts": {
-    "start" : "parcel src/index.html",
+    "start": "parcel src/index.html",
     "build": "del /f /q docs && parcel build src/index.html -d docs --public-url ."
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/N-Nikolaev/drum-machine#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.3.5"
   }
 }
