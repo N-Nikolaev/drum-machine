@@ -1,9 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 
 const App = () => {
     return (
         <div>
-            Hello World!
+            This is a React TS app
         </div>
     )
 }
