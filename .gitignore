@@ -1,4 +1,10 @@
+# SASS #
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+
+# Developer dependencies #
+node_modules
+dist/**
+.cache/**
