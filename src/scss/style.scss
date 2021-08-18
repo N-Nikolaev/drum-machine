@@ -2,6 +2,7 @@
 @use 'abstracts/mixins' as *;
 
 @use 'components/container';
+@use 'components/app';
 
 body {
     @include theme(light);
