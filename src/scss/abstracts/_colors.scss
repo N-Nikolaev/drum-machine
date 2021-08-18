@@ -1,0 +1,26 @@
+// Light theme
+
+$primary--light:        hsl(141, 76%, 48%);
+$secondary--light:      hsl(0, 11%, 9%);
+
+$accent--light:         hsl(0, 0%, 100%);
+
+$light: (
+    primary:            $primary--light,
+    secondary:          $secondary--light,
+    accent:             $accent--light,
+);
+
+
+// Dark theme
+
+$primary--dark:         hsl(0, 11%, 9%);
+$secondary--dark:       hsl(141, 73%, 42%);
+
+$accent--dark:          hsl(0, 0%, 100%);
+
+$dark: (
+    primary:            $primary--dark,
+    secondary:          $secondary--dark,
+    accent:             $accent--dark,
+);
