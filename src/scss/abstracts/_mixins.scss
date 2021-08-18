@@ -1,0 +1,12 @@
+@use "abstracts/themes" as *;
+@use "sass:map";
+
+@mixin theme($theme-name) {
+    $theme: map-get($themes, $theme-name);
+
+    --color-primary: #{map-get($theme, "primary")};
+    --color-primary-light-1: #{map-get($theme, "primary-lighten1")};
+    --color-primary-light-2: #{map-get($theme, "primary-lighten2")};
+    --color-secondary: #{map-get($theme, "secondary")};
+    --color-accent: #{map-get($theme, "accent")};
+}
