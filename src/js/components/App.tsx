@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import DrumMachine from './DrumMachine'
 
 const App: React.FC = () => {
     return (
@@ -14,10 +15,7 @@ const App: React.FC = () => {
                 <Button handler={() => null}>Buttons Text</Button>
             </aside>
 
-            <section className="app__content">
-                
-
-            </section>
+            <DrumMachine />
         </main>
     )
 }
