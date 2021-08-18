@@ -1,7 +1,8 @@
+@use 'normalize';
 @use 'abstracts/mixins' as *;
 
 body {
-    @include theme(dark);
+    @include theme(light);
 
     font-size: 16px;
 
