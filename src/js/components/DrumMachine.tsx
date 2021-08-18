@@ -17,9 +17,9 @@ const DrumMachine: React.FC = () => {
     ]);
 
     return (
-        <article className="drum-machine">
+        <article className="drumMachine">
             <Display padName='' />
-            <section className='drum-machine__drum-pads'>
+            <section className='drumMachine__drum-pads'>
                 {keys.map((key: string) => {
                     return <Pad key={key} keyTrigger={key} />
                 })}
