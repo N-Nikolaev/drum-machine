@@ -3,12 +3,19 @@
 .app {
     display: grid;
     grid-template-areas: 
-        "buttons drum-machine"
-        "header drum-";
+        "buttons drumMachine"
+        "header drumMachine";
     padding: 1rem 2rem;
 
     border: 2px solid var(--color-secondary);
     border-radius: 4px;
     background-color: var(--color-primary-light-1);
 
+    &__header {
+        grid-area: header;
+    }
+
+    &__buttons {
+        grid-area: buttons;
+    }
 }

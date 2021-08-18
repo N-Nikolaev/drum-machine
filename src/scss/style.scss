@@ -3,6 +3,7 @@
 
 @use 'components/container';
 @use 'components/app';
+@use 'components/drumMachine';
 
 body {
     @include theme(light);
