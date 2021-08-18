@@ -1,5 +1,6 @@
 @use 'normalize';
 @use 'abstracts/mixins' as *;
+@use 'abstracts/fonts';
 
 @use 'components/container';
 @use 'components/app';
@@ -8,7 +9,7 @@
 body {
     @include theme(light);
 
+    font-family: fonts.$primary;
     font-size: 16px;
-
-    background-color: var(--color-primary);
+    letter-spacing: 1px;
 }
