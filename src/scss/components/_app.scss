@@ -1,3 +1,4 @@
+@use '../abstracts/fonts';
 @use '../abstracts/vars';
 
 .app {
@@ -5,6 +6,8 @@
     grid-template-areas: 
         "buttons drumMachine"
         "header drumMachine";
+    grid-template-columns: 2fr 7fr;     //! Temp fix just for styling not permanent
+    grid-column-gap: 1rem;
     padding: 1rem 2rem;
 
     border: 2px solid var(--color-secondary);
@@ -12,7 +15,33 @@
     background-color: var(--color-primary-light-1);
 
     &__header {
+        display: grid;
+        justify-content: start;
+        grid-template-columns: max-content max-content;
         grid-area: header;
+
+        background-color: var(--color-primary-light-2);
+
+    }
+
+    &__title {
+        font-size: 2rem;
+        line-height: 1;
+        text-transform: uppercase;
+
+
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+
+    &__version {
+        margin-left: .2rem;
+        font-size: .8rem;
+        font-weight: fonts.$regular;
+        line-height: 1;
+
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
     }
 
     &__buttons {
