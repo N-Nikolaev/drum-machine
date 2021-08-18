@@ -5,6 +5,7 @@
 @use 'components/container';
 @use 'components/app';
 @use 'components/drumMachine';
+@use 'components/button';
 
 body {
     @include theme(light);
