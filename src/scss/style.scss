@@ -1,6 +1,8 @@
 @use 'normalize';
 @use 'abstracts/mixins' as *;
 
+@use 'components/container';
+
 body {
     @include theme(light);
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Container from './components/Container';
 
 const root = document.getElementById('root');
 
 ReactDOM.render(
-    <App />,
+    <Container />,
     root
 );
