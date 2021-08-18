@@ -7,7 +7,7 @@ interface Props {
 
 const Button: React.FC<Props> = (props) => {
     return (
-        <button onClick={props.handler}>
+        <button className='button' onClick={props.handler}>
             {props.children}
         </button>
     )
