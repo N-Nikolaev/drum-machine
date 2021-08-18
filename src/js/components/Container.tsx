@@ -1,10 +1,11 @@
 import React from 'react'
+import App from './App'
 
 const Container: React.FC = () => {
     return (
-        <main className='container'>
-            This is a React TS app
-        </main>
+        <div className='container'>
+            <App />
+        </div>
     )
 }
 
