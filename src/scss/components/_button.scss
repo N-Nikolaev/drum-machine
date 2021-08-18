@@ -1,0 +1,13 @@
+@use '../abstracts/vars';
+
+.button {
+    padding: .6rem;
+
+    border: 2px solid var(--color-secondary);
+    border-radius: vars.$border-radius;
+    background-color: var(--color-primary-light-1);
+
+    &:not(:first-child) {
+        margin-left: .5rem;
+    }
+}
