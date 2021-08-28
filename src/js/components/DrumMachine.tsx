@@ -10,16 +10,19 @@ interface IState {
 }
 
 const DrumMachine: React.FC = () => {
+
+    const srcURL = "https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/LO%20FI%20and%208%20BIT%20KITS/Commodore%2064%208bit%20SID%20Drums"
+
     const [keys] = useState<IState['drumPads']>([
-        { key: 'Q', url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3' },
-        { key: 'W', url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3' },
-        { key: 'E', url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3' },
-        { key: 'A', url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3' },
-        { key: 'S', url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3' },
-        { key: 'D', url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3' },
-        { key: 'Z', url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3' },
-        { key: 'X', url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3' }, 
-        { key: 'C', url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3' },
+        { key: 'Q', url: `${srcURL}/9[kb]c64sid-ch1.wav.mp3` },
+        { key: 'W', url: `${srcURL}/5[kb]c64sid-ch2.wav.mp3` },
+        { key: 'E', url: `${srcURL}/7[kb]c64sid-ch3.wav.mp3` },
+        { key: 'A', url: `${srcURL}/17[kb]c64sid-clptom.wav.mp3` },
+        { key: 'S', url: `${srcURL}/13[kb]c64sid-cometom2.wav.mp3` },
+        { key: 'D', url: `${srcURL}/17[kb]c64sid-kick5.wav.mp3` },
+        { key: 'Z', url: `${srcURL}/13[kb]c64sid-fokick.wav.mp3` },
+        { key: 'X', url: `${srcURL}/12[kb]c64sid-fosn.wav.mp3` }, 
+        { key: 'C', url: `${srcURL}/33[kb]c64sid-gabkick2.wav.mp3` },
     ]);
 
     return (
