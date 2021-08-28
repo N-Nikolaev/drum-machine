@@ -8,7 +8,7 @@ import { faCog, faQuestion } from '@fortawesome/free-solid-svg-icons'
 
 const App: React.FC = () => {
     return (
-        <main className='app'>
+        <main id="drum-machine" className='app'>
             <header className='app__header'>
                 <h1 className='app__title'>Poundit</h1>
                 <h2 className='app__version'>v0.0.1</h2>
