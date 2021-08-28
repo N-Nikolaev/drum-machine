@@ -34,7 +34,7 @@ const Pad: React.FC<IProps> = ({ keyTrigger, url }) => {
     return (
         <button 
             id={keyTrigger}
-            className='pad'
+            className='drum-pad'
             onClick={clickHandler}>
                 {keyTrigger}
         </button>
