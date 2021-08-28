@@ -1,33 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-interface Props {
-    keyTrigger: string;
-    id?: string;
-    url?: string;
+interface IProps {
+    keyTrigger: string
+    url: string
 }
 
-const Pad: React.FC<Props> = (props) => {
+const Pad: React.FC<IProps> = ({ keyTrigger, url }) => {
 
-    // TODO Write event listeners for keydown and click
+    const [audio] = useState(new Audio(url))
 
-    const keyDownHandler = (): void => {
-        const event = new KeyboardEvent('keydown', {
-            key: props.keyTrigger
-        })
-        console.log({keyEvent: event})
+    const playPadSound = (): void => {
+        audio.play()
+    }
+
+    const keyDownHandler = (e: KeyboardEvent): void => {
+        if (e.key === keyTrigger) {
+            playPadSound()
+        }
     }
 
     const clickHandler = ():void => {
-
+        playPadSound()
     }
+
+    useEffect(()=> {
+        window.addEventListener('keydown', keyDownHandler);
+
+        return () => {
+            window.removeEventListener('keydown', keyDownHandler);
+        };
+    },[])
 
     return (
         <button 
-            id={props.keyTrigger}
+            id={keyTrigger}
             className='pad'
-            onKeyDown={keyDownHandler}
             onClick={clickHandler}>
-                {props.keyTrigger}
+                {keyTrigger}
         </button>
     )
 }
