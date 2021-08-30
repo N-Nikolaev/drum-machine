@@ -6,7 +6,7 @@ interface Props {
 
 const Display: React.FC<Props> = ({ padName }) => {
     return (
-        <div id="display">
+        <div id="display" className="display">
             { padName }
         </div>
     )
