@@ -10,7 +10,7 @@ const App: React.FC = () => {
     return (
         <main id="drum-machine" className='app'>
             <header className='app__header'>
-                <h1 className='app__title'>Poundit</h1>
+                <h1 className='app__title'>8beat</h1>
                 <h2 className='app__version'>v0.0.1</h2>
             </header>
 
