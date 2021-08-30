@@ -4,8 +4,10 @@
 
 @use 'components/container';
 @use 'components/app';
-@use 'components/drumMachine';
 @use 'components/button';
+@use 'components/drumMachine';
+@use 'components/display';
+@use 'components/pad';
 
 body {
     @include theme(light);
