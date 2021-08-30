@@ -2,59 +2,62 @@
 @use '../abstracts/mixins' as *;
 
 .app {
-  display: grid;
-  grid-template-areas:
-    'header buttons'
-    'drumMachine drumMachine';
-  // grid-template-columns: 2fr 7fr;     //! Temp fix just for styling not permanent
-  grid-gap: 1rem;
-  padding: 1rem 2rem;
-
-  border: 2px solid var(--color-secondary);
-  border-radius: 4px;
-  background-color: var(--color-primary-light-1);
-
-  @include media-query {
-    grid-template-areas:
-      'buttons drumMachine'
-      'header drumMachine';
-  }
-
-  &__header {
     display: grid;
-    justify-content: start;
-    grid-area: header;
+    grid-template-areas:
+        'header buttons'
+        'drumMachine drumMachine';
+    // grid-template-columns: 2fr 7fr;     //! Temp fix just for styling not permanent
+    grid-gap: 1rem;
+    padding: 1rem 2rem;
+
+    border: 2px solid var(--color-secondary);
+    border-radius: 4px;
+    background-color: var(--color-primary-light-1);
 
     @include media-query {
-      grid-template-columns: max-content max-content;
+        grid-template-areas:
+            'buttons drumMachine'
+            'header drumMachine';
     }
-  }
 
-  &__title {
-    font-size: 2rem;
-    line-height: 1;
-    text-transform: uppercase;
+    &__header {
+        display: grid;
+        justify-content: start;
+        grid-area: header;
 
-    @include media-query {
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
+        @include media-query {
+            grid-template-columns: max-content max-content;
+        }
     }
-  }
 
-  &__version {
-    margin-left: 0.2rem;
+    &__title {
+        font-size: 2rem;
+        line-height: 1;
+        text-transform: uppercase;
 
-    font-size: 0.8rem;
-    font-weight: fonts.$regular;
-    line-height: 1;
-
-    @include media-query {
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
+        @include media-query {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
     }
-  }
 
-  &__buttons {
-    grid-area: buttons;
-  }
+    &__version {
+        margin-left: 0.2rem;
+
+        font-size: 0.8rem;
+        font-weight: fonts.$regular;
+        line-height: 1;
+
+        @include media-query {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__buttons {
+        display: grid;
+        grid-area: buttons;
+        grid-template-columns: auto auto;
+        justify-content: end;
+    }
 }
