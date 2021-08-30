@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react'
 
 interface IProps {
     keyTrigger: string
+    keyName: string
     url: string
+    keyDisplayHandler: React.Dispatch<React.SetStateAction<string>>
 }
 
-const Pad: React.FC<IProps> = ({ keyTrigger, url }) => {
+const Pad: React.FC<IProps> = ({ keyTrigger, keyName, url, keyDisplayHandler }) => {
     const playPadSound = (): void => {
         const audio = document.getElementById(`${keyTrigger}`) as HTMLAudioElement
         audio.play()
+        keyDisplayHandler(keyName)
     }
 
     const keyDownHandler = (e: KeyboardEvent): void => {
