@@ -1,0 +1,38 @@
+@use '../abstracts/vars';
+
+.pad {
+    display: grid;
+    padding: 0.5rem;
+
+    border: 2px solid var(--color-secondary);
+    border-radius: 4rem;
+    background-color: var(--color-primary-light-1);
+
+    &:nth-child(1) {
+        grid-area: pad-1;
+    }
+    &:nth-child(2) {
+        grid-area: pad-2;
+    }
+    &:nth-child(3) {
+        grid-area: pad-3;
+    }
+    &:nth-child(4) {
+        grid-area: pad-4;
+    }
+    &:nth-child(5) {
+        grid-area: pad-5;
+    }
+    &:nth-child(6) {
+        grid-area: pad-6;
+    }
+    &:nth-child(7) {
+        grid-area: pad-7;
+    }
+    &:nth-child(8) {
+        grid-area: pad-8;
+    }
+    &:nth-child(9) {
+        grid-area: pad-9;
+    }
+}
