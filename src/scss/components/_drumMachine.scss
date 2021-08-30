@@ -1,3 +1,15 @@
 .drumMachine {
+    display: grid;
     grid-area: drumMachine;
+    grid-template-rows: auto auto;
+    grid-row-gap: 0.5rem;
+
+    &__drum-pads {
+        display: grid;
+        grid-template-areas:
+            'pad-1 pad-2 pad-3 pad-4 pad-5 pad-6'
+            'pad-7 pad-7 pad-8 pad-8 pad-9 pad-9';
+        grid-template-rows: 2fr 1fr;
+        grid-gap: 0.5rem;
+    }
 }
