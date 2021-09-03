@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Display from './Display'
 import Pad from './Pad'
+import VolumeSlider from './VolumeSlider'
 
 interface IState {
     drumPads: {
@@ -43,6 +44,7 @@ const DrumMachine: React.FC = () => {
                     )
                 })}
             </section>
+            <VolumeSlider />
         </article>
     )
 }
