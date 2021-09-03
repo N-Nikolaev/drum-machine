@@ -28,6 +28,7 @@ const DrumMachine: React.FC = () => {
     ]);
 
     const [currentPad, setCurrentPad] = useState('')
+    const [volume, setVolume] = useState(1)
 
     return (
         <article className="drumMachine">
@@ -40,11 +41,12 @@ const DrumMachine: React.FC = () => {
                             keyTrigger={keyTrigger.key} 
                             keyName={keyTrigger.name}
                             url={keyTrigger.url}
+                            volume={volume}
                             keyDisplayHandler={setCurrentPad}/>
                     )
                 })}
             </section>
-            <VolumeSlider />
+            <VolumeSlider volumeControlHandler={setVolume}/>
         </article>
     )
 }

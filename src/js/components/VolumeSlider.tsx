@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 
-const VolumeSlider: React.FC = () => {
-    const [volume, setVolume] = useState(0.5)
+interface IProps {
+    volumeControlHandler: React.Dispatch<React.SetStateAction<number>>
+}
 
+const VolumeSlider: React.FC<IProps> = ({ volumeControlHandler }) => {
     const log = (value: string): void => {
         console.log(value)
     }
+
+    const volumeStringToFloat = (value: string): void => {
+        volumeControlHandler(parseFloat(value))
+    }
+
     return (
         <div>
             <input 
@@ -14,7 +21,7 @@ const VolumeSlider: React.FC = () => {
                 min='0'
                 step='0.1'
                 type='range'
-                onChange={(e) => log(e.target.value)}/>
+                onChange={(e) => volumeStringToFloat(e.target.value)}/>
         </div>
     )
 }

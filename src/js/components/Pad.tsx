@@ -4,13 +4,21 @@ interface IProps {
     keyTrigger: string
     keyName: string
     url: string
+    volume: number,
     keyDisplayHandler: React.Dispatch<React.SetStateAction<string>>
 }
 
-const Pad: React.FC<IProps> = ({ keyTrigger, keyName, url, keyDisplayHandler }) => {
+const Pad: React.FC<IProps> = ({ 
+        keyTrigger, 
+        keyName, 
+        url, 
+        volume, 
+        keyDisplayHandler }) => {
+
     const playPadSound = (): void => {
         const audio = document.getElementById(`${keyTrigger}`) as HTMLAudioElement
         audio.play()
+        audio.volume = volume
         keyDisplayHandler(keyName)
     }
 
