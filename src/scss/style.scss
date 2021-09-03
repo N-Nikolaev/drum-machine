@@ -8,6 +8,7 @@
 @use 'components/drumMachine';
 @use 'components/display';
 @use 'components/pad';
+@use 'components/volumeSlider';
 
 body {
     @include theme(light);

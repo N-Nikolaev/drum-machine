@@ -1,8 +1,9 @@
 .display {
     display: grid;
+    grid-area: display;
     align-content: center;
     justify-content: center;
-    height: 5rem; //TODO: Fix flow
+    height: 5rem;
 
-    border: 2px solid black;
+    border: 2px solid var(--color-secondary);
 }
