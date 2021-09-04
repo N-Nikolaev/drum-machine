@@ -1,14 +1,26 @@
 import React from 'react'
 
-interface Props {
-    handler: () => void;            // TODO: Pass clickHandler and check for side effects
+interface IProps {
+    modalTypeHandler: React.Dispatch<React.SetStateAction<string>>
+    modalOpenHandler: React.Dispatch<React.SetStateAction<boolean>>
+    modalType: string
     children?: React.ReactNode;
 }
 
-const Button: React.FC<Props> = (props) => {
+const Button: React.FC<IProps> = ({
+        modalTypeHandler, 
+        modalOpenHandler,
+        modalType, 
+        children }) => {
+            
+    const modalHandler = ():void => {
+        modalTypeHandler(modalType)
+        modalOpenHandler(true)
+    }
+
     return (
-        <button className='button' onClick={props.handler}>
-            {props.children}
+        <button className='button' onClick={modalHandler}>
+            {children}
         </button>
     )
 }

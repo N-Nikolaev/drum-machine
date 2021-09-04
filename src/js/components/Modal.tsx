@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Modal: React.FC = () => {
+interface IProps {
+    children: React.ReactNode;
+}
+
+const Modal: React.FC<IProps> = ({children}) => {
     return (
-        <aside>
-            
+        <aside className='modal'>
+            {children}
         </aside>
     )
 }

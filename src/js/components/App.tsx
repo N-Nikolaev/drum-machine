@@ -6,11 +6,13 @@ import Backdrop from './Backdrop'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faQuestion } from '@fortawesome/free-solid-svg-icons'
+import Modal from './Modal'
 
 
 const App: React.FC = () => {
 
-    const [modalOpen, setModalOpen] = useState(true)
+    const [modalOpen, setModalOpen] = useState(false)
+    const [modalType, setModalType] = useState('')
 
     return (
         <main id="drum-machine" className='app'>
@@ -20,10 +22,16 @@ const App: React.FC = () => {
             </header>
 
             <aside className='app__buttons'>
-                <Button handler={() => null}>
+                <Button 
+                    modalType='theme' 
+                    modalTypeHandler={setModalType} 
+                    modalOpenHandler={setModalOpen}>
                     <FontAwesomeIcon icon={faCog} />
                 </Button>
-                <Button handler={() => null}>
+                <Button 
+                    modalType='help' 
+                    modalTypeHandler={setModalType} 
+                    modalOpenHandler={setModalOpen}>
                     <FontAwesomeIcon icon={faQuestion} />
                 </Button>
             </aside>
@@ -31,6 +39,9 @@ const App: React.FC = () => {
             <DrumMachine />
 
             {modalOpen && <Backdrop openModalHandler={setModalOpen}/>}
+
+            {modalOpen && modalType === 'theme' && <Modal>Theme</Modal>}
+            {modalOpen && modalType === 'help' && <Modal>Help</Modal>}
         </main>
     )
 }
