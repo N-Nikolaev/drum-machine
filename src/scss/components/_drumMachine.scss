@@ -1,9 +1,12 @@
+@use '../abstracts/mixins' as *;
+
 .drumMachine {
     display: grid;
     grid-area: drumMachine;
     grid-template-areas:
-        'display volume'
-        'pads volume';
+        'display'
+        'pads'
+        'volume';
     grid-row-gap: 0.5rem;
 
     &__drum-pads {
