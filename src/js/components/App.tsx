@@ -11,7 +11,7 @@ const App: React.FC = () => {
         <main id="drum-machine" className='app'>
             <header className='app__header'>
                 <h1 className='app__title'>8beat</h1>
-                <h2 className='app__version'>v1.0.0</h2>
+                <h2 className='app__version'>v1.1.0</h2>
             </header>
 
             <aside className='app__buttons'>
