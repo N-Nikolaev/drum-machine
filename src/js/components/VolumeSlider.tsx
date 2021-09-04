@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 
 interface IProps {
+    volume: number,
     volumeControlHandler: React.Dispatch<React.SetStateAction<number>>
 }
 
-const VolumeSlider: React.FC<IProps> = ({ volumeControlHandler }) => {
-    const log = (value: string): void => {
-        console.log(value)
-    }
+const VolumeSlider: React.FC<IProps> = ({ volume, volumeControlHandler }) => {
 
     const volumeStringToFloat = (value: string): void => {
         volumeControlHandler(parseFloat(value))
@@ -19,10 +17,9 @@ const VolumeSlider: React.FC<IProps> = ({ volumeControlHandler }) => {
             max='1'
             min='0'
             step='0.01'
+            value={volume}
             type='range'
-            onChange={(e) => volumeStringToFloat(e.target.value)}
-            //@ts-ignore This is a quirk of Firefox and doesn't break anything
-            orient='vertical'/>
+            onChange={(e) => volumeStringToFloat(e.target.value)} />
     )
 }
 

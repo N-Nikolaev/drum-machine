@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 interface IProps {
     keyTrigger: string
@@ -38,7 +38,7 @@ const Pad: React.FC<IProps> = ({
         return () => {
             window.removeEventListener('keydown', keyDownHandler);
         };
-    },[])
+    },[volume])
 
     return (
         <button 

@@ -46,7 +46,7 @@ const DrumMachine: React.FC = () => {
                     )
                 })}
             </section>
-            <VolumeSlider volumeControlHandler={setVolume}/>
+            <VolumeSlider volume={volume} volumeControlHandler={setVolume}/>
         </article>
     )
 }
