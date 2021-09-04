@@ -6,4 +6,8 @@
     right: 0;
 
     background-color: hsla(0, 0%, 0%, 0.5);
+
+    &:hover {
+        cursor: pointer;
+    }
 }

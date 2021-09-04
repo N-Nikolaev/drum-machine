@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Button from './Button'
 import DrumMachine from './DrumMachine'
+import Backdrop from './Backdrop'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faQuestion } from '@fortawesome/free-solid-svg-icons'
 
+
 const App: React.FC = () => {
+
+    const [modalOpen, setModalOpen] = useState(true)
+
     return (
         <main id="drum-machine" className='app'>
             <header className='app__header'>
@@ -24,6 +29,8 @@ const App: React.FC = () => {
             </aside>
 
             <DrumMachine />
+
+            {modalOpen && <Backdrop openModalHandler={setModalOpen}/>}
         </main>
     )
 }
