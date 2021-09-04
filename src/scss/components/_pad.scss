@@ -1,12 +1,19 @@
 @use '../abstracts/vars';
+@use '../abstracts/fonts';
 
 .pad {
     display: grid;
     padding: 0.5rem;
 
+    font-family: fonts.$secondary;
+
     border: 2px solid var(--color-secondary);
     border-radius: 4rem;
     background-color: var(--color-primary-light-1);
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &:nth-child(1) {
         grid-area: pad-1;
