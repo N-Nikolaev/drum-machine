@@ -1,16 +1,16 @@
 @use '../abstracts/fonts';
 @use '../abstracts/mixins' as *;
+@use '../abstracts/vars';
 
 .app {
     display: grid;
     grid-template-areas:
         'header buttons'
         'drumMachine drumMachine';
-    // grid-template-columns: 2fr 7fr;     //! Temp fix just for styling not permanent
     grid-gap: 1rem;
     padding: 1rem 2rem;
 
-    border: 2px solid var(--color-secondary);
+    box-shadow: vars.$shadow--card;
     border-radius: 4px;
     background-color: var(--color-primary-light-1);
 

@@ -1,10 +1,11 @@
 @use '../abstracts/mixins' as *;
+@use '../abstracts/vars';
 
 .volumeSlider {
     grid-area: volume;
     height: 24px;
     width: 100%;
-    margin: 10px 0;
+    margin-top: 10px;
 
     background-color: transparent;
     -webkit-appearance: none;
@@ -17,10 +18,10 @@
         width: 100%;
         height: 1rem;
         cursor: pointer;
-        box-shadow: 0;
-        background: var(--color-primary-light-1);
+        box-shadow: vars.$shadow;
+        background: var(--color-primary-light-2);
         border-radius: 1rem;
-        border: 2px solid var(--color-secondary);
+        border: 0;
     }
 
     &::-webkit-slider-thumb {
@@ -39,10 +40,9 @@
         width: 100%;
         height: 1rem;
         cursor: pointer;
-        box-shadow: 0;
-        background: var(--color-primary-light-1);
+        box-shadow: vars.$shadow;
+        background: var(--color-primary-light-2);
         border-radius: 1rem;
-        border: 2px solid var(--color-secondary);
     }
 
     &::-moz-range-thumb {
@@ -67,15 +67,13 @@
     &::-ms-fill-lower,
     &::-ms-fill-upper {
         background: var(--color-primary-light-1);
-        border: 2px solid var(--color-secondary);
         border-radius: 30px;
-        box-shadow: 0;
+        box-shadow: vars.$shadow;
     }
 
     &::-ms-thumb {
         margin-top: 1px;
         box-shadow: 0;
-        border: 2px solid var(--color-secondary);
         height: 1rem;
         width: 1rem;
         border-radius: 50%;
