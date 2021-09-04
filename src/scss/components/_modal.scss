@@ -1,0 +1,17 @@
+@use '../abstracts/vars';
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    place-items: center;
+    height: 300px;
+    width: 410px;
+
+    background-color: var(--color-primary);
+
+    border-radius: vars.$border-radius;
+}

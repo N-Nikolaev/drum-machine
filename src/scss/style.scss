@@ -10,6 +10,7 @@
 @use 'components/pad';
 @use 'components/volumeSlider';
 @use 'components/backdrop';
+@use 'components/modal';
 
 body {
     @include theme(light);
