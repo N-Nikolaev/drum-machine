@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Button from './Button'
 import DrumMachine from './DrumMachine'
@@ -20,6 +20,10 @@ const App: React.FC = () => {
         'cocoa',
     ])
     const [theme, setTheme] = useState(themeList[0])
+
+    useEffect (()=> {
+        document.body.dataset.theme = theme
+    }, [theme])
 
     return (
         <main id="drum-machine" className='app'>
