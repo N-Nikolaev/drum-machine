@@ -16,6 +16,10 @@
         cursor: pointer;
     }
 
+    &:focus-visible {
+        outline: none;
+    }
+
     &:nth-child(1) {
         grid-area: pad-1;
     }

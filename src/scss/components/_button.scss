@@ -4,11 +4,11 @@
     width: 2.4rem;
     height: 2.4rem;
 
-    color: var(--color-secondary);
+    color: var(--color-primary);
 
-    border: 2px solid var(--color-secondary);
+    border: none;
     border-radius: vars.$border-radius;
-    background-color: var(--color-primary-light-1);
+    background-color: var(--color-secondary);
 
     &:not(:first-child) {
         margin-left: 0.5rem;
@@ -16,6 +16,10 @@
 
     &:hover {
         cursor: pointer;
+    }
+
+    &:focus-visible {
+        outline: none;
     }
 
     &--back {
