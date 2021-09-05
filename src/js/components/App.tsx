@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 import Button from './Button'
 import DrumMachine from './DrumMachine'
 import Backdrop from './Backdrop'
+import Modal from './Modal'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faQuestion } from '@fortawesome/free-solid-svg-icons'
-import Modal from './Modal'
 
 
 const App: React.FC = () => {
@@ -24,12 +24,14 @@ const App: React.FC = () => {
             <aside className='app__buttons'>
                 <Button 
                     modalType='theme' 
+                    modalOpen={modalOpen}
                     modalTypeHandler={setModalType} 
                     modalOpenHandler={setModalOpen}>
                     <FontAwesomeIcon icon={faCog} />
                 </Button>
                 <Button 
                     modalType='help' 
+                    modalOpen={modalOpen}
                     modalTypeHandler={setModalType} 
                     modalOpenHandler={setModalOpen}>
                     <FontAwesomeIcon icon={faQuestion} />
@@ -38,10 +40,13 @@ const App: React.FC = () => {
 
             <DrumMachine />
 
-            {modalOpen && <Backdrop openModalHandler={setModalOpen}/>}
+            {modalOpen && <Backdrop modalOpenHandler={setModalOpen}/>}
 
-            {modalOpen && modalType === 'theme' && <Modal>Theme</Modal>}
-            {modalOpen && modalType === 'help' && <Modal>Help</Modal>}
+            {modalOpen && <Modal 
+                modalType={modalType}
+                modalOpen={modalOpen}
+                modalOpenHandler={setModalOpen} />}
+
         </main>
     )
 }

@@ -1,21 +1,25 @@
 import React from 'react'
 
 interface IProps {
-    modalTypeHandler: React.Dispatch<React.SetStateAction<string>>
+    modalTypeHandler?: React.Dispatch<React.SetStateAction<string>>
     modalOpenHandler: React.Dispatch<React.SetStateAction<boolean>>
-    modalType: string
+    modalOpen: boolean
+    modalType?: string
     children?: React.ReactNode;
 }
 
 const Button: React.FC<IProps> = ({
         modalTypeHandler, 
         modalOpenHandler,
+        modalOpen,
         modalType, 
         children }) => {
             
     const modalHandler = ():void => {
-        modalTypeHandler(modalType)
-        modalOpenHandler(true)
+        if(modalTypeHandler && modalType) {
+            modalTypeHandler(modalType)
+        }
+        modalOpenHandler(!modalOpen)
     }
 
     return (
