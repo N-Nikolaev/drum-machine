@@ -9,19 +9,33 @@ interface IProps {
     modalOpenHandler: React.Dispatch<React.SetStateAction<boolean>>
     modalOpen: boolean
     modalType: string
+    themeHandler: React.Dispatch<React.SetStateAction<string>>
+    themeList: string[]
 }
 
 const Modal: React.FC<IProps> = ({
     modalOpenHandler,
     modalOpen,
-    modalType }) => {
+    modalType,
+    themeHandler,
+    themeList }) => {
 
     const modalTypeRender = (type: string): JSX.Element  => {
         switch (type) {
             case 'theme': 
                 return (
                     <div className='modal__theme-content'>
-                        
+                        {themeList.map((theme, idx) => {
+                            return (
+                                <div 
+                                    className='modal__theme-item'
+                                    key={idx} 
+                                    onClick={() => themeHandler(theme)}>
+                                    <div className={`theme theme--${theme}`}/>
+                                    <em className='theme__name'>{theme}</em>
+                                </div>
+                            )
+                        })}
                     </div>
                 )
             case 'help': 

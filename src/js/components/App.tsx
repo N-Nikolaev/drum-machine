@@ -13,6 +13,13 @@ const App: React.FC = () => {
 
     const [modalOpen, setModalOpen] = useState(false)
     const [modalType, setModalType] = useState('')
+    const [themeList] = useState([
+        'light',
+        'dark',
+        'mango',
+        'cocoa',
+    ])
+    const [theme, setTheme] = useState(themeList[0])
 
     return (
         <main id="drum-machine" className='app'>
@@ -47,7 +54,9 @@ const App: React.FC = () => {
             {modalOpen && <Modal 
                 modalType={modalType}
                 modalOpen={modalOpen}
-                modalOpenHandler={setModalOpen} />}
+                modalOpenHandler={setModalOpen}
+                themeHandler={setTheme}
+                themeList={themeList} />}
 
         </main>
     )
