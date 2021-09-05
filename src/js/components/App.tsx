@@ -23,6 +23,7 @@ const App: React.FC = () => {
 
             <aside className='app__buttons'>
                 <Button 
+                    style='button'
                     modalType='theme' 
                     modalOpen={modalOpen}
                     modalTypeHandler={setModalType} 
@@ -30,6 +31,7 @@ const App: React.FC = () => {
                     <FontAwesomeIcon icon={faCog} />
                 </Button>
                 <Button 
+                    style='button'
                     modalType='help' 
                     modalOpen={modalOpen}
                     modalTypeHandler={setModalType} 

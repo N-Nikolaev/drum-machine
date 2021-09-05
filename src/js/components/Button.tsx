@@ -5,6 +5,7 @@ interface IProps {
     modalOpenHandler: React.Dispatch<React.SetStateAction<boolean>>
     modalOpen: boolean
     modalType?: string
+    style: string
     children?: React.ReactNode;
 }
 
@@ -13,6 +14,7 @@ const Button: React.FC<IProps> = ({
         modalOpenHandler,
         modalOpen,
         modalType, 
+        style, 
         children }) => {
             
     const modalHandler = ():void => {
@@ -23,7 +25,7 @@ const Button: React.FC<IProps> = ({
     }
 
     return (
-        <button className='button' onClick={modalHandler}>
+        <button className={style} onClick={modalHandler}>
             {children}
         </button>
     )
