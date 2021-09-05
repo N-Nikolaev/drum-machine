@@ -6,7 +6,7 @@ import Backdrop from './Backdrop'
 import Modal from './Modal'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCog, faQuestion } from '@fortawesome/free-solid-svg-icons'
+import { faPalette, faQuestion } from '@fortawesome/free-solid-svg-icons'
 
 
 const App: React.FC = () => {
@@ -28,7 +28,7 @@ const App: React.FC = () => {
                     modalOpen={modalOpen}
                     modalTypeHandler={setModalType} 
                     modalOpenHandler={setModalOpen}>
-                    <FontAwesomeIcon icon={faCog} />
+                    <FontAwesomeIcon icon={faPalette} />
                 </Button>
                 <Button 
                     style='button'
