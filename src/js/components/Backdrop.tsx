@@ -1,12 +1,12 @@
 import React from 'react'
 
 interface IProps {
-    openModalHandler: React.Dispatch<React.SetStateAction<boolean>>
+    modalOpenHandler: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Backdrop: React.FC<IProps> = ({ openModalHandler }) => {
+const Backdrop: React.FC<IProps> = ({ modalOpenHandler }) => {
     const exitModal = (): void => {
-        openModalHandler(false);
+        modalOpenHandler(false);
     }
 
     return <div className='backdrop' onClick={exitModal}/>
