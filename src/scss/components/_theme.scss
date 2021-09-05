@@ -1,0 +1,56 @@
+@use '../abstracts/mixins' as *;
+
+@use '../themes/light' as *;
+@use '../themes/dark' as *;
+
+.theme {
+    position: relative;
+
+    display: grid;
+    justify-self: center;
+    height: 2rem;
+    width: 2rem;
+
+    background-color: var(--color-primary);
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        height: 2rem;
+        width: 2rem;
+
+        border-radius: 50%;
+
+        content: '';
+    }
+
+    &::before {
+        right: 0.75rem;
+
+        background-color: var(--color-primary-light-1);
+    }
+
+    &::after {
+        left: 0.75rem;
+
+        background-color: var(--color-secondary);
+    }
+
+    &--light {
+        @include theme(light);
+    }
+
+    &--dark {
+        @include theme(dark);
+    }
+
+    &__name {
+        margin-top: 0.5rem;
+        text-transform: capitalize;
+        font-style: normal;
+    }
+}
