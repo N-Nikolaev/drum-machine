@@ -20,14 +20,21 @@ const Modal: React.FC<IProps> = ({
         switch (type) {
             case 'theme': 
                 return (
-                    <div>
-                        {modalType} modal
+                    <div className='modal__theme-content'>
+                        
                     </div>
                 )
             case 'help': 
                 return (
-                    <div>
-                        {modalType} modal
+                    <div className='modal__instruction-content'>  
+                        <h3 className='modal__sub-title'>How to play:</h3>
+                        <ul className='modal__list'>
+                            <li>The <span className='modal__highlight'>Display box</span> shows the name of beat last hit.</li>
+                            <li>The <span className='modal__highlight'>Pad keys</span> can be clicked or pressed down to make an 8-bit drum sound.</li>
+                            <li>The <span className='modal__highlight'>volume slider</span> controls the volume of the app.</li>
+                            <li>The <span className='modal__highlight'>pallete button</span> opens the theme menu where you can select your theme</li>
+                            <li>The <span className='modal__highlight'>question mark</span> button opens the instruction menu.</li>
+                        </ul>
                     </div>
                 )
             default: 
@@ -37,12 +44,19 @@ const Modal: React.FC<IProps> = ({
 
     return (
         <aside className='modal'>
-            <Button
-                modalOpen={modalOpen}
-                modalOpenHandler={modalOpenHandler}>
+            <div className='modal__header'>
+                <h2 className='modal__title'>
+                    {modalType === 'theme' && 'CHARACTER SELECT'}
+                    {modalType === 'help' && 'PRESS START'}
+                </h2>
+                <Button
+                    style='button button--back'
+                    modalOpen={modalOpen}
+                    modalOpenHandler={modalOpenHandler}>
                     <FontAwesomeIcon icon={faReply} />
-            </Button>
-           {modalTypeRender(modalType)}
+                </Button>
+            </div>
+            {modalTypeRender(modalType)}
         </aside>
     )
 }
