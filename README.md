@@ -39,7 +39,7 @@ Users should be able to:
 
 -   [ ] Give the user the option to swap between different themes
 
--   [ ] Show a modal explaining the application when clicking the "help" button
+-   [x] Show a modal explaining the application when clicking the "help" button
 
 ### Screenshot
 
