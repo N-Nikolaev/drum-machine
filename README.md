@@ -37,7 +37,7 @@ Users should be able to:
 
 -   [x] Change the volume of the drum machine
 
--   [ ] Give the user the option to swap between different themes
+-   [x] Give the user the option to swap between different themes
 
 -   [x] Show a modal explaining the application when clicking the "help" button
 
@@ -64,7 +64,7 @@ This project was based on the sample project provided by Free Code Camp as an ex
 -   The application was built from scratch using ReactJS
 -   Utilizies TypeScript for type checking.
 -   Parcel was used to bundle all the files to reduce file size
--   ~~Has light and dark mode theming~~
+-   Has light and dark mode theming
 -   And is mobile responsive
 
 ## Getting started
@@ -142,3 +142,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 -   [CSS Portal](https://www.cssportal.com/)
 -   [Tom Piggott](https://dribbble.com/tompiggott)
 -   [Nikonov Dmitry](https://dribbble.com/mozdock)
+-   [Scheme Color](https://www.schemecolor.com/)
+-   [Yaizl](https://www.deviantart.com/yaizl/art/Cold-Cyberpunk-Aesthetic-Gradient-790521859)
