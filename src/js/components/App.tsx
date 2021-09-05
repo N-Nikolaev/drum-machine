@@ -17,7 +17,7 @@ const App: React.FC = () => {
         'light',
         'dark',
         'mango',
-        'cocoa',
+        'chill',
     ])
     const [theme, setTheme] = useState(themeList[0])
 

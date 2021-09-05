@@ -13,10 +13,25 @@
 @use 'components/modal';
 
 body {
-    @include theme(light);
-
     font-family: fonts.$primary;
     font-size: 16px;
     letter-spacing: 1px;
     color: var(--color-secondary);
+
+    &,
+    &[data-theme='light'] {
+        @include theme(light);
+    }
+
+    &[data-theme='dark'] {
+        @include theme(dark);
+    }
+
+    &[data-theme='mango'] {
+        @include theme(mango);
+    }
+
+    &[data-theme='chill'] {
+        @include theme(chill);
+    }
 }

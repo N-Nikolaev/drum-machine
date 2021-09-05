@@ -1,7 +1,5 @@
 @use '../abstracts/mixins' as *;
-
-@use '../themes/light' as *;
-@use '../themes/dark' as *;
+@use '../abstracts/themes' as *;
 
 .theme {
     position: relative;
@@ -46,6 +44,14 @@
 
     &--dark {
         @include theme(dark);
+    }
+
+    &--mango {
+        @include theme(mango);
+    }
+
+    &--chill {
+        @include theme(chill);
     }
 
     &__name {

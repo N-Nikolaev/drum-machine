@@ -1,7 +1,11 @@
 @use '../themes/light' as *;
 @use '../themes/dark' as *;
+@use '../themes/mango' as *;
+@use '../themes/chill' as *;
 
 $themes: (
-    light:          $light,
-    dark:           $dark,
+    light: $light,
+    dark: $dark,
+    mango: $mango,
+    chill: $chill,
 );
