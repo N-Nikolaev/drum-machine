@@ -1,5 +1,6 @@
 @use '../abstracts/vars';
 @use '../abstracts/mixins' as *;
+@use '../abstracts/fonts';
 
 .modal {
     position: absolute;
@@ -7,11 +8,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    height: 22.5rem;
+    height: 23.4375rem;
     width: 19.375rem;
-    padding: 1rem 1.5rem;
-
-    font-size: 1.1em;
+    padding: 1rem 1.2rem;
 
     background-color: var(--color-primary);
 
@@ -25,5 +24,30 @@
     &__header {
         display: grid;
         grid-template-columns: 1fr auto;
+    }
+
+    &__title {
+        font-size: 0.9em;
+    }
+
+    &__instruction-content * {
+        margin-top: 0.6rem;
+    }
+
+    &__sub-title {
+        font-size: 0.9rem;
+    }
+
+    &__list {
+        padding-left: 1rem;
+
+        font-size: 0.7rem;
+
+        list-style-type: circle;
+    }
+
+    &__highlight {
+        font-weight: fonts.$medium;
+        text-transform: uppercase;
     }
 }
