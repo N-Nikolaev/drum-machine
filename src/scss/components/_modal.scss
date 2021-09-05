@@ -2,6 +2,8 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/fonts';
 
+@use '../components/theme';
+
 .modal {
     position: absolute;
     top: 50%;
@@ -27,7 +29,26 @@
     }
 
     &__title {
-        font-size: 0.9em;
+        display: grid;
+        align-content: center;
+
+        font-size: 1.1em;
+    }
+
+    &__theme-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 1rem;
+        margin-top: 2rem;
+
+        @include media-query {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    &__theme-item {
+        display: grid;
+        place-content: center;
     }
 
     &__instruction-content * {
