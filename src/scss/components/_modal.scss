@@ -1,4 +1,5 @@
 @use '../abstracts/vars';
+@use '../abstracts/mixins' as *;
 
 .modal {
     position: absolute;
@@ -6,12 +7,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    display: grid;
-    place-items: center;
-    height: 300px;
-    width: 410px;
+    height: 22.5rem;
+    width: 19.375rem;
+    padding: 1rem 1.5rem;
+
+    font-size: 1.1em;
 
     background-color: var(--color-primary);
 
     border-radius: vars.$border-radius;
+
+    @include media-query {
+        height: 18.75rem;
+        width: 25.625rem;
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
 }
